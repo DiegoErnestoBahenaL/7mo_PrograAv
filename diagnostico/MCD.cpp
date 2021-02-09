@@ -19,7 +19,7 @@ int main (){
         return 0;
     }
 
-
+    ///se limpian los arreglos para evitar datos basura ///
     for (int i = 0; i < 50; i++){
 
        primal_f1[i] = 0;
