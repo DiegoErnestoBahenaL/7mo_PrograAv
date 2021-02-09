@@ -25,61 +25,68 @@ int main (){
     strcpy (temp, number.c_str());
 
 
-        if(conversion >= 1){
+
+
+    if(conversion >= 100){
 
              char pref;
-             pref = temp[(size-1) - flag];
+             flag = 3;
+             pref = temp[size - flag];
 
-            u = pref - '0';
+            cent = pref - '0';
 
-            switch (u)
+            switch (cent)
             {
             case 1:
-                roman += "I";
-                flag++;
+                roman += "C";
+              
                 break;
             case 2:
-                roman += "II";   
-                  flag++; 
+                roman += "CC"; 
+             
+   
                 break;
 
             case 3:
-                roman += "III";
-                  flag++;    
+                roman += "CCC";
+              
+    
                 break;
             case 4:
-                roman += "IV";
-                  flag++;    
+                roman += "CD";
+                
                 break;
             case 5:
-                roman += "V";
-                  flag++;    
+                roman += "D";
+           
                 break;
             case 6:
-                roman += "VI";
-                  flag++;    
+                roman += "DC";
+                
                 break;
             case 7:
-                roman += "VII";
-                  flag++;    
+                roman += "DCC";
+            
                 break;
             
             case 8:
-                roman += "VIII";
-                  flag++;    
+                roman += "DCCC";
+              
                 break;    
             case 9:
-                roman += "IX";
-                  flag++;    
+                roman += "CM";
+               
                 break;
             case 0:
                 break;
             }
         }
-      if(conversion >= 10){
+    
+        if(conversion >= 10){
 
              char pref;
-             pref = temp[(size-1) - flag];
+             flag = 2;
+             pref = temp[size - flag];
 
             dec = pref - '0';
 
@@ -87,32 +94,43 @@ int main (){
             {
             case 1:
                 roman += "X";
+                
                 break;
             case 2:
-                roman += "XX";    
+                roman += "XX"; 
+                 
+   
                 break;
 
             case 3:
-                roman += "XXX";    
+                roman += "XXX";
+                
+    
                 break;
             case 4:
-                roman += "XL";    
+                roman += "XL";
+                 
                 break;
             case 5:
-                roman += "L";    
+                roman += "L";
+                 
                 break;
             case 6:
-                roman += "LX";    
+                roman += "LX";
+                
                 break;
             case 7:
-                roman += "LXX";    
+                roman += "LXX";
+                
                 break;
             
             case 8:
-                roman += "LXXX";    
+                roman += "LXXX";
+                    
                 break;    
             case 9:
-                roman += "LC";    
+                roman += "XC";
+                
                 break;
             case 0:
                 break;
@@ -120,16 +138,62 @@ int main (){
         }
 
     
-    flag = roman.length();
+        if(conversion >= 1){
 
-    while (flag>0){
+             char pref;
+             flag = 1;
+             pref = temp[size - flag];
 
+            u = pref - '0';
 
-        
-        cout<<roman[flag-1];
-        flag--;
+            switch (u)
+            {
+            case 1:
+                roman += "I";
+                 
+                break;
+            case 2:
+                roman += "II";   
+                   
+                break;
 
-    }
+            case 3:
+                roman += "III";
+                    
+                break;
+            case 4:
+                roman += "IV";
+                   
+                break;
+            case 5:
+                roman += "V";
+                    
+                break;
+            case 6:
+                roman += "VI";
+                     
+                break;
+            case 7:
+                roman += "VII";
+                    
+                break;
+            
+            case 8:
+                roman += "VIII";
+                  
+                break;    
+            case 9:
+                roman += "IX";
+                  
+                break;
+            case 0:
+                break;
+            }
+        }
+  
+    cout<<roman;
+
+   
    delete [] temp;
     return 0;
 }
