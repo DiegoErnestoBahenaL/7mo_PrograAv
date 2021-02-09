@@ -24,7 +24,60 @@ int main (){
    
     strcpy (temp, number.c_str());
 
+     if(conversion >= 1000){
 
+             char pref;
+             flag = 4;
+             pref = temp[size - flag];
+
+            mil = pref - '0';
+
+            switch (mil)
+            {
+            case 1:
+                roman += "M";
+              
+                break;
+            case 2:
+                roman += "MM"; 
+             
+   
+                break;
+
+            case 3:
+                roman += "MMM";
+              
+    
+                break;
+            case 4:
+                roman += "MV'";
+                
+                break;
+            case 5:
+                roman += "'V'";
+           
+                break;
+            case 6:
+                roman += "'VI'";
+                
+                break;
+            case 7:
+                roman += "'VII'";
+            
+                break;
+            
+            case 8:
+                roman += "'VIII'";
+              
+                break;    
+            case 9:
+                roman += "'IX'";
+               
+                break;
+            case 0:
+                break;
+            }
+        }
 
 
     if(conversion >= 100){
