@@ -29,16 +29,19 @@ namespace printing_console
 
             #region printingContents
 
+            Line();
 
             WriteLine($"{"Type",-10}{"Byte(s) of memory",-10}{"Min",24}{"Max",31}");
-    
-
+             
+            Line ();
+           
             for (int i = 0; i < 11; i++){
 
                 WriteLine($"{nameOfTypes[i],-10}{InfoOfType(i)}");
 
             }
-        
+
+            Line ();
             #endregion
 
 
@@ -46,7 +49,7 @@ namespace printing_console
 
 
         }
-
+    #region methodOfTable
         private static string InfoOfType (int counter){
 
                 string information = string.Empty;
@@ -106,6 +109,25 @@ namespace printing_console
                  return information;
           
         } 
+        #endregion
+   
+    #region methodOfDivison
+        
+        private static void Line (){
 
+             for (int i = 0; i < 82; i++){
+
+                Write("-");
+
+            }
+            WriteLine();
+
+
+
+        }
+
+
+    #endregion
+   
     }
 }
